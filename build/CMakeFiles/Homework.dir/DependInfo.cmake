@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kidd0/BigIntProject/BigNumbers/src/main.cpp" "CMakeFiles/Homework.dir/src/main.cpp.o" "gcc" "CMakeFiles/Homework.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

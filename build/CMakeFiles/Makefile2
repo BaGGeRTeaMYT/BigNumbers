@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/kidd0/BigIntProject/BigNumbers/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/BigNum.dir/all
+all: CMakeFiles/Homework.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/BigNum.dir/clean
+clean: CMakeFiles/Homework.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/BigNum.dir
+# Target rules for target CMakeFiles/Homework.dir
 
 # All Build rule for target.
-CMakeFiles/BigNum.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BigNum.dir/build.make CMakeFiles/BigNum.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BigNum.dir/build.make CMakeFiles/BigNum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=1,2 "Built target BigNum"
-.PHONY : CMakeFiles/BigNum.dir/all
+CMakeFiles/Homework.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=1,2 "Built target Homework"
+.PHONY : CMakeFiles/Homework.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BigNum.dir/rule: cmake_check_build_system
+CMakeFiles/Homework.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BigNum.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Homework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles 0
-.PHONY : CMakeFiles/BigNum.dir/rule
+.PHONY : CMakeFiles/Homework.dir/rule
 
 # Convenience name for target.
-BigNum: CMakeFiles/BigNum.dir/rule
-.PHONY : BigNum
+Homework: CMakeFiles/Homework.dir/rule
+.PHONY : Homework
 
 # clean rule for target.
-CMakeFiles/BigNum.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BigNum.dir/build.make CMakeFiles/BigNum.dir/clean
-.PHONY : CMakeFiles/BigNum.dir/clean
+CMakeFiles/Homework.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/clean
+.PHONY : CMakeFiles/Homework.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

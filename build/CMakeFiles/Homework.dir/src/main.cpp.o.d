@@ -1,4 +1,4 @@
-CMakeFiles/BigNum.dir/src/main.cpp.o: \
+CMakeFiles/Homework.dir/src/main.cpp.o: \
  /home/kidd0/BigIntProject/BigNumbers/src/main.cpp \
  /usr/include/stdc-predef.h \
  /home/kidd0/BigIntProject/BigNumbers/src/../headers/big.h \

@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/BigNum.dir/src/main.cpp.o -o BigNum 
+/usr/bin/c++ -g CMakeFiles/BigNum.dir/src/main.cpp.o -o BigNum 

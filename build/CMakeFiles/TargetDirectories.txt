@@ -1,3 +1,3 @@
-/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles/BigNum.dir
+/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles/Homework.dir
 /home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles/edit_cache.dir
 /home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles/rebuild_cache.dir
