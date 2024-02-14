@@ -1,4 +1,0 @@
-/home/kidd0/BigIntProject/BigNumbers/CMakeFiles/Big.dir
-/home/kidd0/BigIntProject/BigNumbers/CMakeFiles/BigNum.dir
-/home/kidd0/BigIntProject/BigNumbers/CMakeFiles/edit_cache.dir
-/home/kidd0/BigIntProject/BigNumbers/CMakeFiles/rebuild_cache.dir
