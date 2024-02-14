@@ -1,8 +1,8 @@
-#include "../headers/big.h"
+#include <big.h>
 
 namespace Lil {
-    int TestFunction(const int &a) {
+    int Lil::BigNumbers::TestFunction(const int& b) {
         std::cout << "Test function is working\n";
-        return a + 1;
+        return b + 1;
     }
 }

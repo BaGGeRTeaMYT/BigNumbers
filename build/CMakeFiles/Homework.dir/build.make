@@ -69,31 +69,63 @@ include CMakeFiles/Homework.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Homework.dir/flags.make
 
-CMakeFiles/Homework.dir/src/main.cpp.o: CMakeFiles/Homework.dir/flags.make
-CMakeFiles/Homework.dir/src/main.cpp.o: /home/kidd0/BigIntProject/BigNumbers/src/main.cpp
-CMakeFiles/Homework.dir/src/main.cpp.o: CMakeFiles/Homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Homework.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Homework.dir/src/main.cpp.o -MF CMakeFiles/Homework.dir/src/main.cpp.o.d -o CMakeFiles/Homework.dir/src/main.cpp.o -c /home/kidd0/BigIntProject/BigNumbers/src/main.cpp
+CMakeFiles/Homework.dir/src/constructors.cpp.o: CMakeFiles/Homework.dir/flags.make
+CMakeFiles/Homework.dir/src/constructors.cpp.o: /home/kidd0/BigIntProject/BigNumbers/src/constructors.cpp
+CMakeFiles/Homework.dir/src/constructors.cpp.o: CMakeFiles/Homework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Homework.dir/src/constructors.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Homework.dir/src/constructors.cpp.o -MF CMakeFiles/Homework.dir/src/constructors.cpp.o.d -o CMakeFiles/Homework.dir/src/constructors.cpp.o -c /home/kidd0/BigIntProject/BigNumbers/src/constructors.cpp
 
-CMakeFiles/Homework.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Homework.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kidd0/BigIntProject/BigNumbers/src/main.cpp > CMakeFiles/Homework.dir/src/main.cpp.i
+CMakeFiles/Homework.dir/src/constructors.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Homework.dir/src/constructors.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kidd0/BigIntProject/BigNumbers/src/constructors.cpp > CMakeFiles/Homework.dir/src/constructors.cpp.i
 
-CMakeFiles/Homework.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kidd0/BigIntProject/BigNumbers/src/main.cpp -o CMakeFiles/Homework.dir/src/main.cpp.s
+CMakeFiles/Homework.dir/src/constructors.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/src/constructors.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kidd0/BigIntProject/BigNumbers/src/constructors.cpp -o CMakeFiles/Homework.dir/src/constructors.cpp.s
+
+CMakeFiles/Homework.dir/src/functions.cpp.o: CMakeFiles/Homework.dir/flags.make
+CMakeFiles/Homework.dir/src/functions.cpp.o: /home/kidd0/BigIntProject/BigNumbers/src/functions.cpp
+CMakeFiles/Homework.dir/src/functions.cpp.o: CMakeFiles/Homework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Homework.dir/src/functions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Homework.dir/src/functions.cpp.o -MF CMakeFiles/Homework.dir/src/functions.cpp.o.d -o CMakeFiles/Homework.dir/src/functions.cpp.o -c /home/kidd0/BigIntProject/BigNumbers/src/functions.cpp
+
+CMakeFiles/Homework.dir/src/functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Homework.dir/src/functions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kidd0/BigIntProject/BigNumbers/src/functions.cpp > CMakeFiles/Homework.dir/src/functions.cpp.i
+
+CMakeFiles/Homework.dir/src/functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/src/functions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kidd0/BigIntProject/BigNumbers/src/functions.cpp -o CMakeFiles/Homework.dir/src/functions.cpp.s
+
+CMakeFiles/Homework.dir/src/operators.cpp.o: CMakeFiles/Homework.dir/flags.make
+CMakeFiles/Homework.dir/src/operators.cpp.o: /home/kidd0/BigIntProject/BigNumbers/src/operators.cpp
+CMakeFiles/Homework.dir/src/operators.cpp.o: CMakeFiles/Homework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Homework.dir/src/operators.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Homework.dir/src/operators.cpp.o -MF CMakeFiles/Homework.dir/src/operators.cpp.o.d -o CMakeFiles/Homework.dir/src/operators.cpp.o -c /home/kidd0/BigIntProject/BigNumbers/src/operators.cpp
+
+CMakeFiles/Homework.dir/src/operators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Homework.dir/src/operators.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kidd0/BigIntProject/BigNumbers/src/operators.cpp > CMakeFiles/Homework.dir/src/operators.cpp.i
+
+CMakeFiles/Homework.dir/src/operators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/src/operators.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kidd0/BigIntProject/BigNumbers/src/operators.cpp -o CMakeFiles/Homework.dir/src/operators.cpp.s
 
 # Object files for target Homework
 Homework_OBJECTS = \
-"CMakeFiles/Homework.dir/src/main.cpp.o"
+"CMakeFiles/Homework.dir/src/constructors.cpp.o" \
+"CMakeFiles/Homework.dir/src/functions.cpp.o" \
+"CMakeFiles/Homework.dir/src/operators.cpp.o"
 
 # External object files for target Homework
 Homework_EXTERNAL_OBJECTS =
 
-Homework: CMakeFiles/Homework.dir/src/main.cpp.o
+Homework: CMakeFiles/Homework.dir/src/constructors.cpp.o
+Homework: CMakeFiles/Homework.dir/src/functions.cpp.o
+Homework: CMakeFiles/Homework.dir/src/operators.cpp.o
 Homework: CMakeFiles/Homework.dir/build.make
 Homework: CMakeFiles/Homework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Homework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kidd0/BigIntProject/BigNumbers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Homework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Homework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

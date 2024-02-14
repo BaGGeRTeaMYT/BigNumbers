@@ -117,41 +117,126 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Homework
+# Target rules for targets named big
 
 # Build rule for target.
-Homework: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Homework
-.PHONY : Homework
+big: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 big
+.PHONY : big
 
 # fast build rule for target.
-Homework/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/build
-.PHONY : Homework/fast
+big/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/build
+.PHONY : big/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+src/constructors.o: src/constructors.cpp.o
+.PHONY : src/constructors.o
+
+# target to build an object file
+src/constructors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/constructors.cpp.o
+.PHONY : src/constructors.cpp.o
+
+src/constructors.i: src/constructors.cpp.i
+.PHONY : src/constructors.i
+
+# target to preprocess a source file
+src/constructors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/constructors.cpp.i
+.PHONY : src/constructors.cpp.i
+
+src/constructors.s: src/constructors.cpp.s
+.PHONY : src/constructors.s
+
+# target to generate assembly for a file
+src/constructors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/constructors.cpp.s
+.PHONY : src/constructors.cpp.s
+
+src/functions.o: src/functions.cpp.o
+.PHONY : src/functions.o
+
+# target to build an object file
+src/functions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/functions.cpp.o
+.PHONY : src/functions.cpp.o
+
+src/functions.i: src/functions.cpp.i
+.PHONY : src/functions.i
+
+# target to preprocess a source file
+src/functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/functions.cpp.i
+.PHONY : src/functions.cpp.i
+
+src/functions.s: src/functions.cpp.s
+.PHONY : src/functions.s
+
+# target to generate assembly for a file
+src/functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/functions.cpp.s
+.PHONY : src/functions.cpp.s
+
+src/operators.o: src/operators.cpp.o
+.PHONY : src/operators.o
+
+# target to build an object file
+src/operators.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/operators.cpp.o
+.PHONY : src/operators.cpp.o
+
+src/operators.i: src/operators.cpp.i
+.PHONY : src/operators.i
+
+# target to preprocess a source file
+src/operators.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/operators.cpp.i
+.PHONY : src/operators.cpp.i
+
+src/operators.s: src/operators.cpp.s
+.PHONY : src/operators.s
+
+# target to generate assembly for a file
+src/operators.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/big.dir/build.make CMakeFiles/big.dir/src/operators.cpp.s
+.PHONY : src/operators.cpp.s
 
 # Help Target
 help:
@@ -161,10 +246,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Homework"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... big"
+	@echo "... main"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... src/constructors.o"
+	@echo "... src/constructors.i"
+	@echo "... src/constructors.s"
+	@echo "... src/functions.o"
+	@echo "... src/functions.i"
+	@echo "... src/functions.s"
+	@echo "... src/operators.o"
+	@echo "... src/operators.i"
+	@echo "... src/operators.s"
 .PHONY : help
 
 

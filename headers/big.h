@@ -29,6 +29,8 @@ namespace Lil {
         // functions
             std::string toStr() const;
 
+        // nvm
+            int TestFunction(const int&);
 
         private:
             int accuracy; // guess int is enough for your satisfaction
@@ -38,5 +40,3 @@ namespace Lil {
     };
 
 } // namespace
-// nvm
-int TestFunction(const int&);
