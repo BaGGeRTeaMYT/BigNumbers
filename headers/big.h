@@ -9,22 +9,28 @@ namespace Lil {
     class BigNumbers {
        public:
        // constructors
-            BigNumbers(const int&);
-            BigNumbers(const long&);
-            BigNumbers(const long long&);
-            BigNumbers(const unsigned int&);
-            BigNumbers(const unsigned long&);
-            BigNumbers(const unsigned long long&);
-            BigNumbers(const float&);
-            BigNumbers(const double&);
+            template<typename T>
+            BigNumbers(const T);
             BigNumbers(const std::string&);
-            BigNumbers(): accuracy(0), value({}), sign(0) {};  // default
+            BigNumbers(): _accuracy(0), _value({}), _sign(0) {};  // default
 
         // operators
             friend const BigNumbers operator+(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator-(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator*(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator/(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator+=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator-=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator*=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator/=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator==(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator!=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator>=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator<=(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator>(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator<(const BigNumbers&, const BigNumbers&);
+            const BigNumbers operator+();
+            const BigNumbers operator-();
 
         // functions
             std::string toStr() const;
@@ -33,10 +39,13 @@ namespace Lil {
             int TestFunction(const int&);
 
         private:
-            int accuracy; // guess int is enough for your satisfaction
-            std::vector<long long> value;
-            bool sign;
+            int _accuracy; // guess int is enough for your satisfaction
+            std::vector<short> _value;
+            bool _sign;
             
+
+            void popZeros();
+            bool isZero();
     };
 
 } // namespace
