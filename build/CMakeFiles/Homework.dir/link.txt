@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Homework.dir/src/constructors.cpp.o CMakeFiles/Homework.dir/src/functions.cpp.o CMakeFiles/Homework.dir/src/operators.cpp.o -o Homework 
