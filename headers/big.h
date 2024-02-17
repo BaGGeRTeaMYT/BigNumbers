@@ -9,8 +9,8 @@ namespace Lil {
     class BigNumbers {
        public:
        // constructors
-            template<typename T>
-            BigNumbers(const T);
+            BigNumbers(const int&);
+            BigNumbers(const double&);
             BigNumbers(const std::string&);
             BigNumbers(): _accuracy(0), _value({}), _sign(0) {};  // default
 
@@ -35,9 +35,6 @@ namespace Lil {
         // functions
             std::string toStr() const;
 
-        // nvm
-            int TestFunction(const int&);
-
         private:
             int _accuracy; // guess int is enough for your satisfaction
             std::vector<short> _value;
@@ -47,5 +44,6 @@ namespace Lil {
             void popZeros();
             bool isZero();
     };
-
 } // namespace
+
+Lil::BigNumbers operator""_big (const char* a);
