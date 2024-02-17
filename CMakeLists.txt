@@ -8,3 +8,6 @@ target_include_directories(big PUBLIC headers)
 
 add_executable(main main.cpp)
 target_link_libraries(main big)
+
+add_executable(test tests.cpp)
+target_link_libraries(test big)

@@ -19,28 +19,28 @@ namespace Lil {
             friend const BigNumbers operator-(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator*(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator/(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator+=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator-=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator*=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator/=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator==(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator!=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator>=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator<=(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator>(const BigNumbers&, const BigNumbers&);
-            friend const BigNumbers operator<(const BigNumbers&, const BigNumbers&);
-            const BigNumbers operator+();
-            const BigNumbers operator-();
+            friend BigNumbers operator+=(BigNumbers&, const BigNumbers&);
+            friend BigNumbers operator-=(BigNumbers&, const BigNumbers&);
+            friend BigNumbers operator*=(BigNumbers&, const BigNumbers&);
+            friend BigNumbers operator/=(BigNumbers&, const BigNumbers&);
+            friend const bool operator==(const BigNumbers&, const BigNumbers&);
+            friend const bool operator!=(const BigNumbers&, const BigNumbers&);
+            friend const bool operator>=(const BigNumbers&, const BigNumbers&);
+            friend const bool operator<=(const BigNumbers&, const BigNumbers&);
+            friend const bool operator>(const BigNumbers&, const BigNumbers&);
+            friend const bool operator<(const BigNumbers&, const BigNumbers&);
+            friend const BigNumbers operator+(const BigNumbers&);
+            friend const BigNumbers operator-(const BigNumbers&);
 
         // functions
             std::string toStr() const;
+            const BigNumbers abs();
 
         private:
             int _accuracy; // guess int is enough for your satisfaction
             std::vector<short> _value;
             bool _sign;
             
-
             void popZeros();
             bool isZero();
     };

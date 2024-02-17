@@ -1,5 +1,6 @@
 #include <big.h>
 
+
 Lil::BigNumbers::BigNumbers(const std::string &input) {
     _value = {};
     int dots_count = 0;
@@ -17,7 +18,11 @@ Lil::BigNumbers::BigNumbers(const std::string &input) {
                 flag = 1;
                 continue;
             } else {
-                //std::cout << "Set sign to 0" << std::endl;
+                // correct interpretation for numbers like .0123
+                // .123 = 0.123
+                if (symbol == '.') {
+                    _value.push_back(0);
+                }
                 _sign = 0;
                 flag = 1;
             }
@@ -30,10 +35,13 @@ Lil::BigNumbers::BigNumbers(const std::string &input) {
         } else if (isdigit(symbol)) {
             _value.push_back(symbol - '0');
         } else {
-            throw std::runtime_error("Impossible to identify the number (letters inside)");
+            throw std::runtime_error("Impossible to identify the number (symbol which is not a digit or dot))");
         }
     }
     popZeros();
+    if (isZero()) {
+        _sign = 0;
+    }
 }
 
 Lil::BigNumbers::BigNumbers(const int& a): BigNumbers(std::to_string(a)){}
