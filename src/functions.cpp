@@ -28,7 +28,3 @@ bool Lil::BigNumbers::isZero() {
     }
     return true;
 }
-
-const Lil::BigNumbers abs() {
-    
-}

@@ -34,7 +34,6 @@ namespace Lil {
 
         // functions
             std::string toStr() const;
-            const BigNumbers abs();
 
         private:
             int _accuracy; // guess int is enough for your satisfaction

@@ -9,5 +9,8 @@ target_include_directories(big PUBLIC headers)
 add_executable(main main.cpp)
 target_link_libraries(main big)
 
-add_executable(test tests.cpp)
-target_link_libraries(test big)
+add_executable(test-bool tests-bool.cpp)
+target_link_libraries(test-bool big)
+
+add_executable(test-ar tests-ar.cpp)
+target_link_libraries(test-ar big)

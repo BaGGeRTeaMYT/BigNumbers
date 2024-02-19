@@ -9,7 +9,9 @@ const BigNumbers operator+(const BigNumbers& a) {
 
 const BigNumbers operator-(const BigNumbers& a) {
     BigNumbers result = a;
-    result._sign = !result._sign;
+    if (!(result.isZero())) {
+        result._sign = !result._sign;
+    }
     return result;
 }
 
@@ -129,20 +131,108 @@ const bool operator<=(const BigNumbers& a, const BigNumbers& b) {
 }
 
 BigNumbers operator+=(BigNumbers& left, const BigNumbers& right) { // Still working on it
-    // int i = (left._value.size() - left._accuracy) - (right._value.size() - right._accuracy);
-    // while (right._accuracy > left._accuracy) {
-    //     left._value.push_back(0);
-    //     left._accuracy++;
-    // }
-    // while (i < 0) {
-    //     left._value.insert(left._value.begin(), 0);
-    //     i++;
-    // }
-    // if (left._sign != right._sign) {
+    // std::cout << "Inside operator += [\n";
+    if (left.isZero()) {
+        // std::cout << "Left is zero\n]\n";
+        left = right;
+        return left;
+    }
+    int i = (left._value.size() - left._accuracy) - (right._value.size() - right._accuracy);
+    while (right._accuracy > left._accuracy) {
+        left._value.push_back(0);
+        left._accuracy++;
+    }
+    while (i < 0) {
+        left._value.insert(left._value.begin(), 0);
+        i++;
+    }
+    // std::cout << "Left is " << left.toStr() << " now\n";
+    if (left._sign != right._sign) { // different signs
+        // std::cout << "Got different signs\n";
+        if (left._sign == 1) { // left is negative
+            // std::cout << "Left is negative\n";
+            if (-left > right) { // left remains negative
+                // std::cout << "Left will remain negative\n";
+                for (short num : right._value) {
+                    left._value[i++] -= num;
+                }
+                // abs(left) > abs(right) so left._value[0] >= 0
+                for (size_t j = left._value.size() - 1; j > 0; j--) {
+                    if (left._value[j] < 0) {
+                        left._value[j] += 10;
+                        left._value[j - 1]--;
+                    }
+                }
 
-    // }
+            } else { // left should be positive now
+                // std::cout << "Left will become positive\n";
+                left._sign = 0;
+                for (short num : right._value) {
+                    left._value[i] = num - left._value[i];
+                    i++;
+                }
 
-    // return left;
+                for (size_t j = left._value.size() - 1; j > 0; j--) {
+                    if (left._value[j] < 0) {
+                        left._value[j] += 10;
+                        left._value[j - 1]--;
+                    }
+                }
+
+            }
+
+        } else if (right._sign == 1) { // left is positive
+
+            left = right + left; // calling situtation when left is negative
+
+        }
+    } else { // same signs
+        // std::cout << "Got same signs\n";
+        // left will keep its sign
+        for (short num : right._value) {
+            left._value[i++] += num;
+        }
+        for (int j = left._value.size(); j > 0; j--) {
+            if (left._value[j] > 9) {
+                left._value[j] -= 10;
+                left._value[j - 1]++;
+            }
+        }
+        if (left._value[0] > 9) {
+            left._value[0] -= 10;
+            left._value.insert(left._value.begin(), 1);
+        }
+
+    }
+    // std::cout << "]\n";
+    if (left.isZero()) {
+        left._sign = 0;
+    }
+    left.popZeros();
+    return left;
 }
+
+const BigNumbers operator+(const BigNumbers& left, const BigNumbers& right) {
+    BigNumbers sum = 0;
+    // std::cout << "Inside operator+ {\n";
+    // std::cout << sum.toStr() << " + " << left.toStr() << std::endl;
+    sum += left;
+    // std::cout << " = " << sum.toStr() << std::endl;
+    // std::cout << sum.toStr() << " + " << right.toStr() << std::endl;
+    sum += right;
+    // std::cout << " = " << sum.toStr() << std::endl << "}\n";
+    return sum;
+}
+
+const BigNumbers operator-(const BigNumbers& left, const BigNumbers& right) {
+    return left + (-right);
+}
+
+BigNumbers operator-=(BigNumbers& left, const BigNumbers& right) {
+    left += -right;
+    return left;
+}
+
+
 
 }
