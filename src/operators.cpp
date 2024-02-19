@@ -233,6 +233,14 @@ BigNumbers operator-=(BigNumbers& left, const BigNumbers& right) {
     return left;
 }
 
+const BigNumbers operator*(const BigNumbers &left, const BigNumbers &right)  {
+    BigNumbers result = naiveMultiplication(left, right);
+    return result;
+}
 
+BigNumbers operator*=(BigNumbers &left, const BigNumbers  &right) {
+    left = left*right;
+    return  left;
+}
 
 }

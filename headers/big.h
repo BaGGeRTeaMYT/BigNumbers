@@ -42,6 +42,9 @@ namespace Lil {
             
             void popZeros();
             bool isZero();
+            void extendVector(size_t);
+            friend BigNumbers naiveMultiplication(const BigNumbers&, const BigNumbers&);
+            void normalize();
     };
 } // namespace
 
