@@ -31,6 +31,7 @@ namespace Lil {
             friend const bool operator<(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator+(const BigNumbers&);
             friend const BigNumbers operator-(const BigNumbers&);
+            std::ostream& operator <<(std::ostream&);
 
         // functions
             std::string toStr() const;
@@ -45,6 +46,7 @@ namespace Lil {
             void extendVector(size_t);
             friend BigNumbers naiveMultiplication(const BigNumbers&, const BigNumbers&);
             void normalize();
+            void TenPow(int a);
     };
 } // namespace
 

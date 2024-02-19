@@ -54,7 +54,6 @@ BigNumbers naiveMultiplication(const BigNumbers& left, const BigNumbers& right) 
     result._value.resize(left._value.size() + right._value.size() - 1);
     result._accuracy = (left._accuracy) + (right._accuracy);
     result._sign = (left._sign)^(right._sign);
-    std::cout << left.toStr() << " * " << right.toStr() << '\n';
     for (size_t i = 0; i < left._value.size(); i++) {
         for (size_t j = 0; j < right._value.size(); j++) {
             result._value[i + j] += (left._value[i])*(right._value[j]);
@@ -66,6 +65,20 @@ BigNumbers naiveMultiplication(const BigNumbers& left, const BigNumbers& right) 
     result.normalize();
     result.popZeros();
     return result;
+}
+
+void BigNumbers::TenPow(int a) {
+    (*this) = 1;
+    while (a > 0) {
+        (*this)._value.push_back(0);
+        a--;
+    }
+    if (a < 0) {
+        (*this)._accuracy = -a;
+        (*this)._value.resize((*this)._accuracy + 1);
+        (*this)._value[0] = 0;
+        (*this)._value[(*this)._value.size() - 1] = 1;
+    }
 }
 
 }

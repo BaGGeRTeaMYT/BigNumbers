@@ -233,14 +233,57 @@ BigNumbers operator-=(BigNumbers& left, const BigNumbers& right) {
     return left;
 }
 
-const BigNumbers operator*(const BigNumbers &left, const BigNumbers &right)  {
+const BigNumbers operator*(const BigNumbers& left, const BigNumbers& right)  {
     BigNumbers result = naiveMultiplication(left, right);
     return result;
 }
 
-BigNumbers operator*=(BigNumbers &left, const BigNumbers  &right) {
+BigNumbers operator*=(BigNumbers& left, const BigNumbers& right) {
     left = left*right;
     return  left;
 }
 
+std::ostream& BigNumbers::operator<<(std::ostream& os) {
+    os << (*this).toStr();
+    return os;
+}
+
+const BigNumbers operator/(const BigNumbers& left, const BigNumbers& right) {
+    if (right == 0) {
+        throw std::runtime_error("Division by zero");
+    }
+    BigNumbers result;
+    BigNumbers new_left = left;
+    new_left._sign = 0;
+    result._sign = (left._sign)^(right._sign);
+    int digit_difference = std::max((static_cast<int>(left._value.size()) - left._accuracy) 
+    - (static_cast<int>(right._value.size()) - right._accuracy), 0);
+    result._value.resize(digit_difference + 1 + std::max(left._accuracy, right._accuracy));
+    result._accuracy = std::max(left._accuracy, right._accuracy);
+    for (int i = 0; i < result._value.size(); i++) {
+        
+        short lhs = 0, rhs = 10;
+        BigNumbers power;
+        power.TenPow(digit_difference - i);
+        power._sign = right._sign;
+
+        while (rhs - lhs > 1) {
+            short mid = (lhs + rhs)/2;
+            if (right*mid*power > new_left) {
+                rhs = mid;
+            } else {
+                lhs = mid;
+            }
+        }
+        new_left -= right*lhs*power;
+        result._value[i] = lhs;
+
+    }
+    return result;
+}
+
+BigNumbers operator/=(BigNumbers& left, const BigNumbers& right) {
+    left = left/right;
+    return left;
+}
 }

@@ -4,8 +4,8 @@ int main() {
     Lil::BigNumbers a("1030.11");
     Lil::BigNumbers b("1");
     Lil::BigNumbers c("0");
-    Lil::BigNumbers d("-1010.123");
-    Lil::BigNumbers e("2");
+    Lil::BigNumbers d("-1010.12300000000000");
+    Lil::BigNumbers e("2.00");
     Lil::BigNumbers f("5");
     std::vector<Lil::BigNumbers> arr = {a, b, c, d, e, f};
 
@@ -26,5 +26,6 @@ int main() {
     }
     std::cout << "(" << c.toStr() << ") * (" << c.toStr()
             << ") = " << (c * c).toStr() << std::endl;
+    std::cout << (e/d).toStr() << std::endl;
     return 0;
 }
