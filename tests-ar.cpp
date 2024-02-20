@@ -11,21 +11,27 @@ int main() {
 
     for (int i = 0; i < arr.size(); i++) {
         for (int j = 0; j < arr.size(); j++) {
-            std::cout << "(" << arr[i].toStr() << ") + (" << arr[j].toStr()
-            << ") = " << (arr[i] + arr[j]).toStr() << std::endl;
-            std::cout << "(" << arr[i].toStr() << ") - (" << arr[j].toStr()
-            << ") = " << (arr[i] - arr[j]).toStr() << std::endl;
+            std::cout << "(" << arr[i] << ") + (" << arr[j]
+            << ") = " << (arr[i] + arr[j]) << std::endl;
+            std::cout << "(" << arr[i] << ") - (" << arr[j]
+            << ") = " << (arr[i] - arr[j]) << std::endl;
         }
     }
     std::cout << "Multiplications:\n";
     for (int i = 0; i < arr.size(); i++) {
         for (int j = 0; j < arr.size(); j++) {
-            std::cout << "(" << arr[i].toStr() << ") * (" << arr[j].toStr()
-            << ") = " << (arr[i] * arr[j]).toStr() << std::endl;
+            std::cout << "(" << arr[i] << ") * (" << arr[j]
+            << ") = " << (arr[i] * arr[j]) << std::endl;
         }
     }
-    std::cout << "(" << c.toStr() << ") * (" << c.toStr()
-            << ") = " << (c * c).toStr() << std::endl;
-    std::cout << (e/d).toStr() << std::endl;
+    std::cout << "Divisions:\n";
+    for (int i = 0; i < arr.size(); i++) {
+        for (int j = 0; j < arr.size(); j++) {
+            if (arr[j] != 0) {
+                std::cout << "(" << arr[i] << ") / (" << arr[j]
+                << ") = " << (arr[i] / arr[j]) << std::endl;
+            }
+        }
+    }
     return 0;
 }

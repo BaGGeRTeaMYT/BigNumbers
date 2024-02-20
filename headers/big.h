@@ -3,13 +3,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <chrono>
 
 namespace Lil {
+    
+    #define MAX_ACCURACY 103
 
     class BigNumbers {
        public:
        // constructors
             BigNumbers(const int&);
+            BigNumbers(const long long&);
             BigNumbers(const double&);
             BigNumbers(const std::string&);
             BigNumbers(): _accuracy(0), _value({}), _sign(0) {};  // default
@@ -31,10 +35,12 @@ namespace Lil {
             friend const bool operator<(const BigNumbers&, const BigNumbers&);
             friend const BigNumbers operator+(const BigNumbers&);
             friend const BigNumbers operator-(const BigNumbers&);
-            std::ostream& operator <<(std::ostream&);
+            friend std::ostream& operator <<(std::ostream&, const BigNumbers&);
 
         // functions
             std::string toStr() const;
+            BigNumbers Calculate_Pi(const int b);
+            explicit operator bool() const;
 
         private:
             int _accuracy; // guess int is enough for your satisfaction

@@ -45,4 +45,5 @@ Lil::BigNumbers::BigNumbers(const std::string &input) {
 }
 
 Lil::BigNumbers::BigNumbers(const int& a): BigNumbers(std::to_string(a)){}
+Lil::BigNumbers::BigNumbers(const long long& a): BigNumbers(std::to_string(a)){}
 Lil::BigNumbers::BigNumbers(const double& a): BigNumbers(std::to_string(a)){}

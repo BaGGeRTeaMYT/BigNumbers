@@ -243,8 +243,8 @@ BigNumbers operator*=(BigNumbers& left, const BigNumbers& right) {
     return  left;
 }
 
-std::ostream& BigNumbers::operator<<(std::ostream& os) {
-    os << (*this).toStr();
+std::ostream& operator<<(std::ostream& os, const BigNumbers& num) {
+    os << num.toStr();
     return os;
 }
 
@@ -260,24 +260,32 @@ const BigNumbers operator/(const BigNumbers& left, const BigNumbers& right) {
     - (static_cast<int>(right._value.size()) - right._accuracy), 0);
     result._value.resize(digit_difference + 1 + std::max(left._accuracy, right._accuracy));
     result._accuracy = std::max(left._accuracy, right._accuracy);
+    int res_integer_part = result._value.size() - result._accuracy;
     for (int i = 0; i < result._value.size(); i++) {
-        
-        short lhs = 0, rhs = 10;
-        BigNumbers power;
-        power.TenPow(digit_difference - i);
-        power._sign = right._sign;
+        if (i <= res_integer_part + MAX_ACCURACY) {
+            short lhs = 0, rhs = 10;
+            BigNumbers power;
+            power.TenPow(digit_difference - i);
+            power._sign = right._sign;
+            power *= right;
 
-        while (rhs - lhs > 1) {
-            short mid = (lhs + rhs)/2;
-            if (right*mid*power > new_left) {
-                rhs = mid;
-            } else {
-                lhs = mid;
+            while (rhs - lhs > 1) {
+                short mid = (lhs + rhs)/2;
+               if (mid*power > new_left) {
+                    rhs = mid;
+                } else {
+                    lhs = mid;
+                }
             }
+            new_left -= lhs*power;
+            result._value[i] = lhs;
+        } else {
+            break;
         }
-        new_left -= right*lhs*power;
-        result._value[i] = lhs;
-
+    }
+    result.popZeros();
+    if (result.isZero()) {
+        result._sign = 0;
     }
     return result;
 }
