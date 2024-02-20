@@ -14,7 +14,9 @@ namespace Lil {
        // constructors
             BigNumbers(const int&);
             BigNumbers(const long long&);
+            BigNumbers(const unsigned long long&);
             BigNumbers(const double&);
+            BigNumbers(const long double&);
             BigNumbers(const std::string&);
             BigNumbers(): _accuracy(0), _value({}), _sign(0) {};  // default
 
@@ -54,6 +56,8 @@ namespace Lil {
             void normalize();
             void TenPow(int a);
     };
-} // namespace
 
-Lil::BigNumbers operator""_big (const char* a);
+} // namespace
+Lil::BigNumbers operator""_big (const char* a, size_t length);
+Lil::BigNumbers operator""_big (unsigned long long a);
+Lil::BigNumbers operator""_big (long double a);

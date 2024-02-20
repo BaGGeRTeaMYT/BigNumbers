@@ -294,4 +294,20 @@ BigNumbers operator/=(BigNumbers& left, const BigNumbers& right) {
     left = left/right;
     return left;
 }
+
+}
+
+Lil::BigNumbers operator ""_big (const char* a, size_t length) {
+    Lil::BigNumbers result(a);
+    return result;
+}
+
+Lil::BigNumbers operator ""_big (unsigned long long a) {
+    Lil::BigNumbers result = a;
+    return result;
+}
+
+Lil::BigNumbers operator ""_big (long double a) {
+    Lil::BigNumbers result = a;
+    return result;
 }

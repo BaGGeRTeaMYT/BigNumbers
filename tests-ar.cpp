@@ -2,11 +2,11 @@
 
 int main() {
     Lil::BigNumbers a("1030.11");
-    Lil::BigNumbers b("1");
+    Lil::BigNumbers b = "1"_big;
     Lil::BigNumbers c("0");
-    Lil::BigNumbers d("-1010.12300000000000");
+    Lil::BigNumbers d = -1010.12300000000000_big;
     Lil::BigNumbers e("2.00");
-    Lil::BigNumbers f("5");
+    Lil::BigNumbers f = 5_big;
     std::vector<Lil::BigNumbers> arr = {a, b, c, d, e, f};
 
     for (int i = 0; i < arr.size(); i++) {
