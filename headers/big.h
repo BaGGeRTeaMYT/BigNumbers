@@ -7,7 +7,9 @@
 
 namespace Lil {
     
-    #define MAX_ACCURACY 103
+    // you will probably die, before 1000
+    // numbers will be calculated with my lib
+    #define MAX_ACCURACY 1000
 
     class BigNumbers {
        public:

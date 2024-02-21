@@ -99,8 +99,8 @@ BigNumbers BigNumbers::Calculate_Pi(const int b) {
         (*this) = 3;
         return 3;
     }
-    // to calculate the last number more accurately
-    int a = b;
+
+    int a = b + 1;
     BigNumbers magic_num;
     BigNumbers magic_zero = 0;
     magic_zero._value.resize(a + 1);
@@ -139,8 +139,8 @@ BigNumbers BigNumbers::Calculate_Pi(const int b) {
         num3 += 8;
         num4 += 8;
     }
-    (*this)._value.pop_back();
-    (*this)._accuracy--;
+    (*this)._accuracy = b;
+    (*this)._value.resize(b + 1);
     return (*this);
 }
 
